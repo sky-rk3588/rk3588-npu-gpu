@@ -1,0 +1,36 @@
+From 6aa197328c7adff9f4fc01d33685ba01db8df809 Mon Sep 17 00:00:00 2001
+From: Igor Paunovic <royalnet026@gmail.com>
+Date: Sat, 1 Aug 2026 14:55:03 +0200
+Subject: [PATCH] dt-bindings: npu: rockchip,rk3588-rknn-core: add
+ #cooling-cells
+
+The three NPU cores share one clock and one supply, so DVFS is driven
+from a single core and a devfreq cooling device can only be registered
+on that one.  Allow that core to be referenced from a thermal zone's
+cooling-map by documenting #cooling-cells.
+
+Signed-off-by: Igor Paunovic <royalnet026@gmail.com>
+---
+ .../devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml  | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml b/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
+index caca2a490..7350b5121 100644
+--- a/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
++++ b/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
+@@ -42,6 +42,12 @@ properties:
+       - const: npu
+       - const: pclk
+ 
++  "#cooling-cells":
++    description:
++      Present on the core that drives the shared NPU clock, which is the
++      core a devfreq cooling device is registered on.
++    const: 2
++
+   interrupts:
+     maxItems: 1
+ 
+-- 
+2.53.0
+

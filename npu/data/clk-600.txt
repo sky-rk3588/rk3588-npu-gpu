@@ -1,0 +1,54 @@
+ scmi_clk_npu                        0       0        0        200000000   0          0     50000      Y   fdad0000.npu                    npu                      
+                                                                                                           npu@fdad0000                    no_connection_id         
+                                                                                                           fdac0000.npu                    npu                      
+                                                                                                           npu@fdac0000                    no_connection_id         
+                                                                                                           fdab0000.npu                    npu                      
+                                                                                                           fdab0000.npu                    npu                      
+                                                                                                           npu@fdab0000                    no_connection_id         
+ scmi_clk_dsu                        0       0        0        1800000000  0          0     50000      Y   deviceless                      no_connection_id         
+    clk_npu_cm0_rtc                  0       0        0        32768       0          0     50000      N      deviceless                      no_connection_id         
+    tclk_npu_wdt                     0       0        0        24000000    0          0     50000      N      deviceless                      no_connection_id         
+    clk_nputimer_root                0       0        0        24000000    0          0     50000      N      deviceless                      no_connection_id         
+       clk_nputimer1                 0       0        0        24000000    0          0     50000      N         deviceless                      no_connection_id         
+       clk_nputimer0                 0       0        0        24000000    0          0     50000      N         deviceless                      no_connection_id         
+    clk_npu_pvtm                     0       0        0        24000000    0          0     50000      N      deviceless                      no_connection_id         
+          pclk_dsu_root              3       3        0        198000000   0          0     50000      Y            deviceless                      no_connection_id         
+             pclk_dsu                1       1        0        198000000   0          0     50000      Y               deviceless                      no_connection_id         
+          sclk_dsu                   7       7        0        1188000000  0          0     50000      Y            deviceless                      no_connection_id         
+             periph_dsu              3       3        0        297000000   0          0     50000      Y               deviceless                      no_connection_id         
+                tsclk_dsu            1       1        0        99000000    0          0     50000      Y                  deviceless                      no_connection_id         
+                cntclk_dsu           1       1        0        99000000    0          0     50000      Y                  deviceless                      no_connection_id         
+             aclks_dsu               1       1        0        396000000   0          0     50000      Y               deviceless                      no_connection_id         
+             aclkm_dsu               1       1        0        594000000   0          0     50000      Y               deviceless                      no_connection_id         
+             aclkmp_dsu              1       1        0        396000000   0          0     50000      Y               deviceless                      no_connection_id         
+             gicclk_dsu              1       1        0        297000000   0          0     50000      Y               deviceless                      no_connection_id         
+             atclk_dsu               1       1        0        297000000   0          0     50000      Y               deviceless                      no_connection_id         
+             hclk_npu_cm0_root       0       1        0        396000000   0          0     50000      N               power-domain@9                  no_connection_id         
+                fclk_npu_cm0_core    0       0        0        396000000   0          0     50000      N                  deviceless                      no_connection_id         
+             hclk_npu_root           0       6        0        198000000   0          0     50000      N               power-domain@11                 no_connection_id         
+                hclk_npu0            0       3        0        198000000   0          0     50000      N                  fdab0000.npu                    hclk                     
+                                                                                                                          npu@fdab0000                    no_connection_id         
+                hclk_npu2            0       3        0        198000000   0          0     50000      N                  fdad0000.npu                    hclk                     
+                                                                                                                          npu@fdad0000                    no_connection_id         
+                hclk_npu1            0       3        0        198000000   0          0     50000      N                  fdac0000.npu                    hclk                     
+                                                                                                                          npu@fdac0000                    no_connection_id         
+          clk_npu_dsu0               0       6        0        250000000   0          0     50000      N            power-domain@11                 no_connection_id         
+             aclk_npu0               0       3        0        250000000   0          0     50000      N               fdab0000.npu                    aclk                     
+                                                                                                                       npu@fdab0000                    no_connection_id         
+             clk_core_npu_pvtm       0       0        0        250000000   0          0     50000      N               deviceless                      no_connection_id         
+             aclk_npu2               0       3        0        250000000   0          0     50000      N               fdad0000.npu                    aclk                     
+                                                                                                                       npu@fdad0000                    no_connection_id         
+             aclk_npu1               0       3        0        250000000   0          0     50000      N               fdac0000.npu                    aclk                     
+                                                                                                                       npu@fdac0000                    no_connection_id         
+             pclk_npu_root           0       6        0        100000000   0          0     50000      N               fdad0000.npu                    pclk                     
+                                                                                                                       npu@fdad0000                    no_connection_id         
+                                                                                                                       fdac0000.npu                    pclk                     
+                                                                                                                       npu@fdac0000                    no_connection_id         
+                                                                                                                       fdab0000.npu                    pclk                     
+                                                                                                                       npu@fdab0000                    no_connection_id         
+                pclk_npu_wdt         0       0        0        100000000   0          0     50000      N                  deviceless                      no_connection_id         
+                pclk_npu_timer       0       0        0        100000000   0          0     50000      N                  deviceless                      no_connection_id         
+                pclk_npu_grf         0       0        0        100000000   0          0     50000      Y                  deviceless                      no_connection_id         
+                pclk_npu_pvtm        0       0        0        100000000   0          0     50000      N                  deviceless                      no_connection_id         
+             pclk_dsu_ns_root        1       1        0        100000000   0          0     50000      Y               deviceless                      no_connection_id         
+             pclk_dsu_s_root         1       1        0        100000000   0          0     50000      Y               deviceless                      no_connection_id         

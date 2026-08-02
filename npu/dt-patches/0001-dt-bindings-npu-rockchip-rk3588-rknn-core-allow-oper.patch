@@ -1,0 +1,37 @@
+From dd837772d6e2e3e92ac87b59a2f19ba07db0dde2 Mon Sep 17 00:00:00 2001
+From: Igor Paunovic <royalnet026@gmail.com>
+Date: Sat, 1 Aug 2026 23:04:24 +0200
+Subject: [PATCH] dt-bindings: npu: rockchip,rk3588-rknn-core: allow
+ operating-points-v2
+
+The NPU cores are pinned to a fixed assigned-clock-rate today, but the
+hardware supports the same frequency range the GPU does, and the SoC
+exposes the clock through SCMI and the supply through a regulator the
+binding already requires.
+
+Allow a core to reference an OPP table so DVFS can be described in DT
+rather than hardcoded.  The property is optional: the three cores share
+one clock and one supply, so scaling is driven from the core that owns
+them and only that core needs a table.
+
+Signed-off-by: Igor Paunovic <royalnet026@gmail.com>
+---
+ .../devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml      | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml b/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
+index 7350b5121..5653386d2 100644
+--- a/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
++++ b/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
+@@ -56,6 +56,8 @@ properties:
+ 
+   npu-supply: true
+ 
++  operating-points-v2: true
++
+   power-domains:
+     maxItems: 1
+ 
+-- 
+2.53.0
+
